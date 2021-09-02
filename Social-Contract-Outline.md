@@ -10,6 +10,7 @@
 
 ```
 We want to create a website that helps the user to find and book tourist activities. Some skills we want to develop or refine is using git/github, front end, and UI skills.
+We also want to add online booking, being able to read reviews from other people that used the website, and allow the user to familiarize with the tour operators ( bus driver, tour guide etc..).
 ```
 
 ## EXPECTATIONS
