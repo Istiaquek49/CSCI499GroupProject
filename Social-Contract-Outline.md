@@ -17,7 +17,7 @@ We also want to add online booking, being able to read reviews from other people
 > What do we expect of one another in regard to attendance at meetings, participation, frequency of communication, the quality of work, etc.?
 
 ```
-Place you team's answer here
+We want at least everyone to respond to questions or communicate if needed.
 ```
 
 ## POLICIES & PROCEDURES
