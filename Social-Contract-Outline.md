@@ -25,7 +25,7 @@ We want at least everyone to respond to questions or communicate if needed.
 > What are our expectations for conduct among team members?
 
 ```
-Place you team's answer here
+We want our group members to at least make an attempt to show progress on anything they are stuck at. Also ask for help when needed.
 ```
 
 ## CONSEQUENCES
@@ -33,7 +33,7 @@ Place you team's answer here
 > How will we address conflict?
 
 ```
-Place you team's answer here
+If the goals, expectations, policies and procedures are not meet they will be sent to the dungeon and also reported to the Professor.  
 ```
 
 ---
