@@ -1,8 +1,8 @@
 # Team Contract
 
-#### Team name: `name`
-#### Date: `date`
-#### GitHub Repository: `link`
+#### Team name: `HIID`
+#### Date: `9/2/21`
+#### GitHub Repository: `https://github.com/Istiaquek49/CSCI499GroupProject/edit/main/Social-Contract-Outline.md`
 
 ## GOALS
 > What are our team goals for this project? 
