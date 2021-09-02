@@ -9,7 +9,7 @@
 > What do we want to accomplish? What skills do we want to develop or refine?
 
 ```
-Place you team's answer here
+We want to create a website that helps the user to find and book tourist activities.
 ```
 
 ## EXPECTATIONS
@@ -39,8 +39,8 @@ Place you team's answer here
 
 ### We share these goals and expectations, and agree to these policies, procedures, and consequences.
 
- - `Team member name`
- - `Team member name`
- - `Team member name`
- - `Team member name`
+ - `Istiaque Khan`
+ - `Hayley Robinson`
+ - `Ivan Bilyk`
+ - `Deren Lin`
  - `Team member name`
