@@ -17,7 +17,7 @@ We also want to add online booking, being able to read reviews from other people
 > What do we expect of one another in regard to attendance at meetings, participation, frequency of communication, the quality of work, etc.?
 
 ```
-We want at least everyone to respond to questions or communicate if needed.
+We want at least everyone to respond to questions or communicate if needed. Communication is key, meeting should only be allowed to be missed if there is a legitimate reason.
 ```
 
 ## POLICIES & PROCEDURES
@@ -25,7 +25,7 @@ We want at least everyone to respond to questions or communicate if needed.
 > What are our expectations for conduct among team members?
 
 ```
-We want our group members to at least make an attempt to show progress on anything they are stuck at. Also ask for help when needed.
+We want our group members to at least make an attempt to show progress on anything they are stuck at. Be respectful, contribute to the group, help each other, communication at least 2 times a week and will be adjusted as necessary to complete the project.
 ```
 
 ## CONSEQUENCES
@@ -33,7 +33,7 @@ We want our group members to at least make an attempt to show progress on anythi
 > How will we address conflict?
 
 ```
-If the goals, expectations, policies and procedures are not meet they will be sent to the dungeon and also reported to the Professor.  
+If the goals, expectations, policies and procedures are not meet they will be sent to the dungeon to have their organs harvested and will also reported to the Professor.  
 ```
 
 ---
