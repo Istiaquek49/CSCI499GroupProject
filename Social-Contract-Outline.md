@@ -9,7 +9,7 @@
 > What do we want to accomplish? What skills do we want to develop or refine?
 
 ```
-We want to create a website that helps the user to find and book tourist activities.
+We want to create a website that helps the user to find and book tourist activities. Some skills we want to develop or refine is using git/github, front end, and UI.
 ```
 
 ## EXPECTATIONS
@@ -43,4 +43,4 @@ Place you team's answer here
  - `Hayley Robinson`
  - `Ivan Bilyk`
  - `Deren Lin`
- - `Team member name`
+
