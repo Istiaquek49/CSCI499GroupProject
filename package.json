@@ -1,0 +1,24 @@
+{
+  "name": "csci499groupproject",
+  "version": "1.0.0",
+  "description": "Reservify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Istiaquek49/CSCI499GroupProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Istiaquek49/CSCI499GroupProject/issues"
+  },
+  "homepage": "https://github.com/Istiaquek49/CSCI499GroupProject#readme",
+  "dependencies": {
+    "mocha": "^9.1.1",
+    "next": "^11.1.2",
+    "react": "^17.0.2"
+  }
+}
