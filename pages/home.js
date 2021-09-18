@@ -1,13 +1,45 @@
 import React from 'react'
+import Header from '../components/header'
 
 const Home = () => (
-  <div>
-    <img src="https://user-images.githubusercontent.com/2351721/31314483-7611c488-ac0e-11e7-97d1-3cfc1c79610e.png" alt="placeholder" width="690" height="420"/>
-    <h1>Reservify</h1>
-    <a>Cart</a><br/>
-    <a>Help</a><br/>
-    <a>About</a><br/>
-  </div>
+  <div styles={positionStyle}>
+    <style jsx global> {`
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+    body {
+      margin: 0px;
+      padding: 0px;
+      font-family: Quicksand;
+          }
+    `}</style>
+
+    <img src="https://cdn.mos.cms.futurecdn.net/fs5rJxVnkbrumyJyfQ8tQg.jpg" style={styles} alt="" />
+    <Header />
+  </div >
 )
+
+const header = {
+  textAlign: "center",
+  color: "black",
+  fontSize: "22px"
+}
+
+const positionStyle = {
+  position: "relative",
+  border: 0,
+  padding: 0
+}
+
+const styles = {
+  backgroundImage: `url(https://cdn.mos.cms.futurecdn.net/fs5rJxVnkbrumyJyfQ8tQg.jpg)`,
+  backgroundPosition: 'center',
+  position: "absolute",
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  opacity: "0.3",
+  width: '100vw',
+  height: '100vh'
+};
+
+
 
 export default Home;
