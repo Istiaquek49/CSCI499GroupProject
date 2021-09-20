@@ -13,6 +13,18 @@ app.prepare().then(() => {
     app.render(req, res, '/home')
   })
 
+  server.get('/about', (req, res) => {
+    app.render(req, res, '/about')
+  })
+
+  server.get('/cart', (req, res) => {
+    app.render(req, res, '/cart')
+  })
+
+  server.get('/help', (req, res) => {
+    app.render(req, res, '/help')
+  })
+
   server.get('*', (req, res) => {
     handle(req, res)
   })
