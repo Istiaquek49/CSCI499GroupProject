@@ -30,7 +30,7 @@ const positionStyle = {
 }
 
 const styles = {
-  backgroundImage: `url(https://cdn.mos.cms.futurecdn.net/fs5rJxVnkbrumyJyfQ8tQg.jpg)`,
+  backgroundImage: "url(https://cdn.mos.cms.futurecdn.net/fs5rJxVnkbrumyJyfQ8tQg.jpg)",
   backgroundPosition: 'center',
   position: "absolute",
   backgroundSize: 'cover',
