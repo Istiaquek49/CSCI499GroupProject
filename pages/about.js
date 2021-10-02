@@ -1,22 +1,25 @@
 import React from 'react'
-import Header from '../components/header'
+import Navbar from '../components/Navbar'
 
-const Home = () => (
-  <div>
-    <a>Cart</a>
-    <a>Help</a>
-    <a>Home</a>
-   
-    <h1 style={Header}>About The Creators</h1>
-    <img src="https://cdn.mos.cms.futurecdn.net/fs5rJxVnkbrumyJyfQ8tQg.jpg" alt="placeholder" width="100%" height="100%"/>
-  </div>
+const About = () => (
+  <div styles={positionStyle}>
+    <Header />
+    <div styler ={header}>About us</div>
+  </div >
 )
 
-const Header = {
-  textAlign: "center",
+const header = {
+  display: 'flex',
+  justifyContent: 'center',
   color: "black",
   fontSize: "22px"
 }
 
+const positionStyle = {
+  position: "relative",
+  border: 0,
+  padding: 0
+}
 
-export default Home;
+
+export default About;
