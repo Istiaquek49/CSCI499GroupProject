@@ -1,8 +1,8 @@
 import React from 'react'
+import Header from '../components/header'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import Cards from '../components/Cards'
-
+// import Cards from '../components/Cards'
 
 const Home = () => (
   <div style={{
@@ -11,21 +11,21 @@ const Home = () => (
     height: '100vh',
     minHeight: '100%'
   }}>
-    
+    <Header />
     <Navbar />
     <div style={{
       display: 'flex',
       justifyContent: 'flex-start',
       marginLeft: 30,
       marginTop: 50
-    }}> 
-    <h1>
-      Reservify
-    </h1>
+    }}>
+      <h1>
+        Reservify
+      </h1>
     </div>
-    <div class='content'>Spend Less Time Here Spend More Time There</div>
-    <Cards/>
-    <Footer/>
+    <div>Spend Less Time Here Spend More Time There</div>
+    {/* <Cards /> */}
+    <Footer />
   </div >
 )
 

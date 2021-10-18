@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = () => (
+const Navbar = () => (
     <div style={headerStyle}>
         <a style={{
                     padding: '0px 10px 0px 10px',
@@ -44,4 +44,4 @@ const headerStyle = {
 }
 
 
-export default Header;
+export default Navbar;
