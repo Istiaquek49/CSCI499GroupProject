@@ -2,7 +2,9 @@ import React from "react";
 
 const Navbar = () => (
   <div style={headerStyle}>
-    <h1 style={headingStyle}>Reservify</h1>
+    <h1 style={headingStyle}>
+      <a href='/' style={{textDecoration: 'none', color: '#1a1b1c'}} >Reservify</a>
+    </h1>
     <div style={{ marginLeft: 'auto' }}>
       <a style={linkStyle} href="/" >Home</a>
       <a style={linkStyle} href="/about">About</a>
@@ -16,8 +18,7 @@ const headerStyle = {
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
-  backgroundColor: '#F3F7F0',
-  position: 'sticky'
+  backgroundColor: '#F3F7F0'
 }
 
 const linkStyle = {
