@@ -3,6 +3,7 @@ import Header from '../components/header'
 import Navbar from '../components/navbar'
 import Main from '../components/home-main'
 import Footer from '../components/footer'
+import Description from '../components/description'
 // import Cards from '../components/Cards'
 
 // Color Palette
@@ -22,6 +23,7 @@ const Home = () => (
     <Header />
     <Navbar />
     <Main />
+    <Description/>
     {/* <Cards /> */}
     {/* <Footer /> */}
   </div >

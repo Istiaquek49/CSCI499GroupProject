@@ -1,9 +1,11 @@
 import React from 'react'
 import Header from '../components/header'
+import Navbar from '../components/navbar'
 
 const About = () => (
   <div styles={positionStyle}>
     <Header />
+    <Navbar/>
     <div styler ={header}>About us</div>
   </div >
 )
