@@ -14,26 +14,34 @@ import Footer from '../components/footer'
 
 const Home = () => (
   <div style={{
-    border: '1px solid black',
-    position: 'relative',
-    height: '100vh',
-    minHeight: '100%'
+    height: 'auto',
+    minHeight: '100%',
+    position: 'relative'
   }}>
     <Header />
     <Navbar />
     <div style={{
-      display: 'flex',
-      justifyContent: 'flex-start',
-      marginLeft: 30,
-      marginTop: 50
+      position: 'relative'
     }}>
-      <h1>
-        Reservify
-      </h1>
+      <img style={{
+        maxWidth: '100%',
+        height: 'auto',
+        opacity: '70%',
+      }} src="/chor-tsang-07mSKrzKiRw-unsplash.jpg" />
+      <div style={{
+        position: 'absolute',
+        top: 150,
+        right: 130,
+        color: '#1a1b1c',
+        fontSize: '30px',
+        letterSpacing: '.1rem',
+        
+      }}>
+        Spend less time here, spend more time there.
+      </div>
     </div>
-    <div>Spend Less Time Here Spend More Time There</div>
     {/* <Cards /> */}
-    <Footer />
+    {/* <Footer /> */}
   </div >
 )
 
