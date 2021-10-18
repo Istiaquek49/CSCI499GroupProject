@@ -1,8 +1,16 @@
 import React from 'react'
 import Header from '../components/header'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Navbar from '../components/navbar'
+import Footer from '../components/footer'
 // import Cards from '../components/Cards'
+
+// Color Palette
+// #003E92 (Blue)
+// #FBAF00 (Yellow)
+// #A15E49 (Brown)
+// #285943 (Green)
+// #F3F7F0 (White)
+// #1a1b1c (Black)
 
 const Home = () => (
   <div style={{
