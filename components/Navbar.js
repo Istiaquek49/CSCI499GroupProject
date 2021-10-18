@@ -13,7 +13,6 @@ const Navbar = () => (
 )
 
 const headerStyle = {
-  minheight: 200,
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
