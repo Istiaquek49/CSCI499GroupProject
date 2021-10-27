@@ -4,16 +4,16 @@ import 'react-slideshow-image/dist/styles.css'
 
 const fadeImages = [
   {
-    url: 'https://images.unsplash.com/photo-1633882228840-e847b7694baf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80',
-    caption: 'Slide 1'
+    url: 'https://images.unsplash.com/photo-1612278675615-7b093b07772d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1738&q=80',
+    caption: 'Island of Zakynthos'
   },
   {
-    url: 'https://images.unsplash.com/photo-1614357932292-a38393b966a3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=735&q=80',
-    caption: 'Slide 2'
+    url: 'https://images.unsplash.com/photo-1508849789987-4e5333c12b78?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1293&q=80',
+    caption: 'Night At Time Square'
   },
   {
-    url: 'https://images.unsplash.com/photo-1633749130895-bb439832d4b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80',
-    caption: 'Slide 3'
+    url: 'https://images.unsplash.com/photo-1565349173908-1cf6bc9fd4ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+    caption: 'Dordrecht, The Netherlands'
   },
 ];
 
