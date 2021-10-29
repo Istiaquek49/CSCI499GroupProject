@@ -1,8 +1,8 @@
 import { Events } from '../clients/algolia'
+import EventModel from '../models/event_model'
 
 const events = new Events()
 
-export const addEvent = (eventInfo) => {
-  events.test()
-  return ""
+export const search = (term) => {
+
 }

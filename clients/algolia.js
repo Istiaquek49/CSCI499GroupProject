@@ -16,26 +16,37 @@ class Events {
     if (!events.length) {
       return []
     } else if (events.length === 1) {
-      this.index.saveObject(events)
-      .then(res => {
-        console.log(res)
-        return []
-      });
+      this.index.saveObject(events, {
+        autoGenerateObjectIDIfNotExist: true
+      })
+        .then(res => {
+          console.log(res)
+          return []
+        });
     } else {
-      this.index.saveObjects(events)
-      .then(res => {
-        console.log(res)
-        return []
-      });
+      this.index.saveObjects(events, {
+        autoGenerateObjectIDIfNotExist: true
+      })
+        .then(res => {
+          console.log(res)
+          return res
+        });
     }
   };
 
-  editEvent(events) {
+  editEvent(editedEvent) {
 
   };
 
   deleteEvent(eventId) {
 
+  };
+
+  search(term) {
+    this.index.search(term)
+    .then(results => {
+      console.log(results)
+    })
   };
 };
 

@@ -1,3 +1,6 @@
 node_modules
 .next
 .env
+
+business-list.json
+/custom-scripts

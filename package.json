@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node server.js",
+    "custom": "babel-node ./custom-scripts/algolia-script.js",
     "build": "next build"
   },
   "repository": {
