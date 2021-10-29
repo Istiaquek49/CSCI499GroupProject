@@ -4,6 +4,8 @@ import Navbar from '../components/navbar'
 import Main from '../components/home-main'
 import Footer from '../components/footer'
 import Description from '../components/description'
+import Slideshow from '../components/slideshow'
+import Slideshowlocation from '../components/slideshowlocation'
 // import Cards from '../components/Cards'
 
 // Color Palette
@@ -23,7 +25,8 @@ const Home = () => (
     <Header />
     <Navbar />
     <Main />
-    <Description/>
+    <Slideshow />
+    <Slideshowlocation/>
     {/* <Cards /> */}
     {/* <Footer /> */}
   </div >
