@@ -46,10 +46,8 @@ class Events {
   };
 
   search(term) {
-    this.index.search(term)
-      .then(results => {
-        console.log(results)
-      })
+    return this.index.search(term)
+      .then(results => results)
   };
 };
 

@@ -7,9 +7,23 @@ const Searchbar = () => {
 
   const onSearchClick = () => {
     if (searchTerm.length) {
-      // fetch('url')
-      //   .then(res => setSearchResults(res))
-      console.log('get results')
+      fetch(`/search?searchTerm=${searchTerm}`)
+        .then(res => res.json())
+        .then(results => setSearchResults(results))
+    }
+  }
+
+  const results = () => {
+    if (searchResults.length) {
+      return (
+        <div>
+          {searchResults.map(result => (
+            <h1>
+              {result.name}
+            </h1>
+          ))}
+        </div>
+      )
     }
   }
 
@@ -56,6 +70,7 @@ const Searchbar = () => {
       >
         Search
       </button>
+      {results()}
     </div>
   )
 }
