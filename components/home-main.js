@@ -1,4 +1,5 @@
 import React from 'react'
+import Searchbar from '../components/searchbar'
 
 const Main = () => (
   <div style={{
@@ -20,6 +21,14 @@ const Main = () => (
 
     }}>
       Spend less time here, spend more time there.
+    </div>
+    <div style={{
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)'
+    }}>
+      <Searchbar />
     </div>
   </div>
 )

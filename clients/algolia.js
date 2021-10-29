@@ -13,6 +13,7 @@ class Events {
    * @return {ids} An array of event object IDs
    */
   addEvents(events) {
+    console.log("test")
     if (!events.length) {
       return []
     } else if (events.length === 1) {
@@ -22,7 +23,8 @@ class Events {
         .then(res => {
           console.log(res)
           return []
-        });
+        })
+        .catch(err => console.log(err))
     } else {
       this.index.saveObjects(events, {
         autoGenerateObjectIDIfNotExist: true
@@ -30,7 +32,8 @@ class Events {
         .then(res => {
           console.log(res)
           return res
-        });
+        })
+        .catch(err => console.log(err))
     }
   };
 
@@ -44,9 +47,9 @@ class Events {
 
   search(term) {
     this.index.search(term)
-    .then(results => {
-      console.log(results)
-    })
+      .then(results => {
+        console.log(results)
+      })
   };
 };
 
