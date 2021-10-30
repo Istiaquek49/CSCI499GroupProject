@@ -31,6 +31,11 @@ app.prepare().then(() => {
     app.render(req, res, '/help')
   })
 
+  server.post('/reviews/:objectID', (req, res) => {
+    const objectID = req.params.objectID
+    
+  })
+
   server.get('*', (req, res) => {
     handle(req, res)
   })

@@ -13,7 +13,6 @@ class Events {
    * @return {ids} An array of event object IDs
    */
   addEvents(events) {
-    console.log("test")
     if (!events.length) {
       return []
     } else if (events.length === 1) {
@@ -49,6 +48,11 @@ class Events {
     return this.index.search(term)
       .then(results => results)
   };
+
+  getItemInfo(id) {
+    return this.index.getObject(id)
+      .then(obj => obj)
+  }
 };
 
 class Hotels {

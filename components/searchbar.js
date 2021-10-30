@@ -4,8 +4,10 @@ const Searchbar = () => {
   const [searchTerm, setSearchTerm] = useState("")
   const [locationTerm, setLocationTerm] = useState("")
   const [searchResults, setSearchResults] = useState([])
+  const [searched, setSearched] = useState(false)
 
   const onSearchClick = () => {
+    setSearched(true)
     if (searchTerm.length) {
       fetch(`/search?searchTerm=${searchTerm}`)
         .then(res => res.json())
@@ -16,20 +18,54 @@ const Searchbar = () => {
   const results = () => {
     if (searchResults.length) {
       return (
-        <div>
+        <div style={{
+          width: 500,
+          display: 'flex',
+          flexDirection: 'column',
+          position: 'absolute',
+          maxHeight: 500,
+          backgroundColor: '#F3F7F0',
+          overflow: 'scroll'
+        }}>
           {searchResults.map(result => (
-            <h1>
+            <div style={{
+              height: 80,
+              padding: '10px 10px 10px 10px',
+              borderBottom: '1px solid #e4e4e4',
+              fontWeight: 6,
+              cursor: 'pointer'
+            }}
+              onClick={e => console.log(result)}
+            >
               {result.name}
-            </h1>
+            </div>
           ))}
         </div>
       )
+    } else if (searched === true) {
+      {
+        return (
+          <div style={{
+            height: 80,
+            padding: '10px 10px 10px 10px',
+            borderRadius: '0px 5px 5px 0px',
+            fontStyle: 'italic',
+            fontWeight: 4,
+            border: '1px solid #e4e4e4',
+            color: '#e3e3e3',
+            borderRadius: 5
+          }}>
+            No Results
+          </div>
+        )
+      }
     }
   }
 
   return (
     <div style={{
-      fontSize: 20
+      fontSize: 20,
+      position: 'relative'
     }}>
       Find
       <input style={{
