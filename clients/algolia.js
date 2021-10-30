@@ -13,29 +13,41 @@ class Events {
    * @return {ids} An array of event object IDs
    */
   addEvents(events) {
+    console.log("test")
     if (!events.length) {
       return []
     } else if (events.length === 1) {
-      this.index.saveObject(events)
-      .then(res => {
-        console.log(res)
-        return []
-      });
+      this.index.saveObject(events, {
+        autoGenerateObjectIDIfNotExist: true
+      })
+        .then(res => {
+          console.log(res)
+          return []
+        })
+        .catch(err => console.log(err))
     } else {
-      this.index.saveObjects(events)
-      .then(res => {
-        console.log(res)
-        return []
-      });
+      this.index.saveObjects(events, {
+        autoGenerateObjectIDIfNotExist: true
+      })
+        .then(res => {
+          console.log(res)
+          return res
+        })
+        .catch(err => console.log(err))
     }
   };
 
-  editEvent(events) {
+  editEvent(editedEvent) {
 
   };
 
   deleteEvent(eventId) {
 
+  };
+
+  search(term) {
+    return this.index.search(term)
+      .then(results => results)
   };
 };
 

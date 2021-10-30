@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node server.js",
+    "custom": "babel-node ./custom-scripts/algolia-script.js",
     "build": "next build"
   },
   "repository": {
@@ -19,13 +20,14 @@
   "homepage": "https://github.com/Istiaquek49/CSCI499GroupProject#readme",
   "dependencies": {
     "algoliasearch": "^4.10.5",
+    "body-parser": "^1.19.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "next": "^11.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-slideshow-image": "^3.5.1",
-    "styled-components": "^5.3.1"
+    "react-shopping-cart": "^1.9.5",
+    "react-slideshow-image": "^3.5.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.4",

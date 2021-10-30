@@ -2,7 +2,9 @@ import { Events } from '../clients/algolia'
 
 const events = new Events()
 
-export const addEvent = (eventInfo) => {
-  events.test()
-  return ""
+export const search = (term) => {
+  return events.search(term)
+  .then(results => {
+    return results.hits
+  })
 }
