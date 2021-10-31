@@ -1,11 +1,12 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Header from '../components/header'
+import Navbar from '../components/navbar'
 
 
 const Help = () => (
     <div styles={positionStyle}>
-  
-      <Header />
+    <Header />
+    <Navbar/>
     </div >
   )
   
