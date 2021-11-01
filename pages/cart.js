@@ -1,184 +1,97 @@
-// import React from 'react'
-// import Header from '../components/header'
-// import Navbar from '../components/navbar'
+import React from 'react'
+import Header from '../components/header'
+import Navbar from '../components/navbar'
+import Select from 'react-select'
 
-// const Cart = () => (
-//     <div style={{
-//       height: 'auto',
-//       minHeight: '100%',
-//       position: 'relative'
-//     }}>
-//     <Header />
-//     <Navbar />
-//     <div>
-      
-//     </div>
-//     </div >
-//   )
-  
-  
-  import React, { PureComponent } from "react";
-import {
-  CartComponent,
-  ProductComponent,
-  CheckoutButtonComponent,
-  cartLocalization
-} from "react-shopping-cart";
+const options = [
+  { value: 'chocolate', label: '1' },
+  { value: 'strawberry', label: '2' },
+  { value: 'vanilla', label: '3' },
+  { value: 'vanillas', label: '4' },
+  { value: 'vanillass', label: '5' },
+  { value: 'vanillasss', label: '6' },
+  { value: 'vanillassss', label: '7' },
+]
 
-import "bootstrap/dist/css/bootstrap.css";
-import "animate.css/animate.min.css";
-import "font-awesome/css/font-awesome.min.css";
-
-const { getDefaultLocalization } = cartLocalization;
-
-// You may take localization object from wherever you want, that's just an example
-// For more information, see localization section
-const iPadCaseLocalization = {
-  color: "Color",
-  iPadCase: "iPad case",
-  red: "Red",
-  green: "Green",
-  yellow: "Yellow",
-  GBP: "£",
-  EUR: "€",
-  USD: "$"
-};
-
-const iPadPropertiesWithAdditionalCostLocalization = {
-  yellow: "Yellow (+{cost, number, CUR})"
-};
-
-class Cart extends PureComponent {
-  state = {
-    products: {},
-    product: {
-      name: "iPadCase",
-      id: "ipad-case",
-      path: "/shop/ipad-case/",
-      properties: {
-        color: [
-          "red",
-          "green",
-          {
-            additionalCost: {
-              GBP: 1,
-              EUR: 2,
-              USD: 3.5
-            },
-            value: "yellow"
-          }
-        ]
-      },
-      propertiesToShowInCart: ["color"],
-      prices: { GBP: 70, EUR: 80, USD: 90 },
-      currency: "GBP",
-      imageSrc: "1-483x321.jpeg"
-    },
-    getProductLocalization: getDefaultLocalization("product", "en", {
-      ...iPadCaseLocalization,
-      ...iPadPropertiesWithAdditionalCostLocalization
-    }),
-    getCheckoutButtonLocalization: getDefaultLocalization(
-      "checkoutButton",
-      "en",
-      iPadCaseLocalization
-    ),
-    getCartLocalization: getDefaultLocalization(
-      "cart",
-      "en",
-      iPadCaseLocalization
-    )
-  };
-
-  addProduct = (key, product, currency) =>
-    void this.setState(
-      ({
-        products: { [key]: cartProduct = { quantity: 0 }, ...restOfProducts }
-      }) => ({
-        products: {
-          ...restOfProducts,
-          [key]: {
-            ...product,
-            quantity: product.quantity + cartProduct.quantity
-          }
-        }
-      })
-    );
-
-  generateProductKey = (id, properties) =>
-    `${id}/${Object.entries(properties).join("_")}`;
-
-  updateProduct = (key, updatedProduct) => void console.log(":)");
-
-  removeProduct = key => void console.log(":C");
-
-  render() {
-    const {
-      addProduct,
-      generateProductKey,
-      updateProduct,
-      removeProduct,
-      state
-    } = this;
-
-    const {
-      getProductLocalization,
-      getCheckoutButtonLocalization,
-      getCartLocalization,
-      products,
-      product
-    } = state;
-
-    const checkoutButtonElement = (
-      <CheckoutButtonComponent
-        grandTotal={500}
-        hidden={false}
-        checkoutURL="/to/my/checkout"
-        currency="GBP"
-        getLocalization={getCheckoutButtonLocalization}
-      />
-    );
-    return (
-      <div className="container">
-        <ProductComponent
-          {...product}
-          checkoutButton={checkoutButtonElement}
-          onAddProduct={
-            addProduct
-            // Help product to get into the cart
-          }
-          generateProductKey={
-            generateProductKey
-            // create product key as you wish
-          }
-          getLocalization={getProductLocalization}
-        />
-
-        <CartComponent
-          products={
-            products
-            // Provide your own product's Object(Look at Products)
-          }
-          onUpdateProduct={
-            updateProduct
-            // Update something
-          }
-          getLocalization={getCartLocalization}
-          currency="GBP"
-          onRemoveProduct={
-            removeProduct
-            // Remove something
-          }
-          checkoutButton={checkoutButtonElement}
-          isCartEmpty={false}
-          getLocalization={getCartLocalization}
-        />
+const Cart = () => (
+    <div style={{
+      height: 'auto',
+      minHeight: '100%',
+    position: 'relative',
+    }}>
+    <Header />
+    <Navbar />
+    <div>
+      <h1 style={{
+        marginTop: 100,
+        marginLeft: 100
+      }}>Shopping Cart</h1>
+      <img src="https://images.unsplash.com/photo-1528266542126-d64713949918?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=688&q=80" style={imageSec2} alt=""/>
+      <div style={{
+        maxWidth: 300,
+        marginTop:-300,
+        marginLeft:500
+      }}>
+      <p>How many days?</p>
+        <Select options= {options} /></div>
+        <div style={{
+        maxWidth: 300,
+        marginTop:-150,
+        marginLeft:500
+      }}>
+      <p>How many people?</p>
+        <Select options={options} /></div>
+      <div style={{
+        marginLeft: 500,
+        marginTop: 200
+      }}>
+        <button style={{
+          fontSize: 20,
+          marginLeft: 25
+      }}>Delete</button></div>
+      <div style={{
+        marginLeft: 1150,
+        fontSize: 25,
+        marginTop: -250
+      }}><p>Item:</p></div>
+        <div style={{
+        marginLeft: 1150,
+        fontSize: 25,
+        marginTop: 50
+      }}><p>Taxes:</p></div>
+       <div style={{
+        marginLeft: 1150,
+        fontSize: 30,
+        marginTop: 25
+      }}><br></br>
+      <hr style={{color:"black"}}></hr>
+      <br></br> <p>Total:</p>
       </div>
-    );
-  }
+      <button style={{
+        backgroundColor: '#285943',
+        color: '#F3F7F0',
+        fontSize: 20,
+        marginLeft: 1300,
+        padding: "15px 32px",
+        borderRadius: '50px',
+        marginTop: 50,
+      }}>Checkout</button>
+    </div>
+    
+  </div >
+  
+)
+  
+const imageSec2 = {
+  marginTop: 50,
+  marginLeft: 80,
+  marginBottom: 20,
+  marginRight: 20,
+  maxHeight: 400,
+  display: 'flex',
+  justifyContent: 'space-between'
 }
-
+  
 export default Cart;
 
 
-  // export default Cart;
