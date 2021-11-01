@@ -146,7 +146,7 @@ const tester3 = {
 }
 
 const terstt = {
-    background: "#F3F7F0",
+    background: "white",
     color: 'black',
     height: '150vh',
     boxSizing: 'border-box',
