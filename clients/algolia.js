@@ -51,7 +51,9 @@ class Events {
 
   getItemInfo(id) {
     return this.index.getObject(id)
-      .then(obj => obj)
+      .then(result => {
+        return result
+      })
   }
 };
 
