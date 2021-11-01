@@ -7,18 +7,18 @@ import Header from '../components/header';
 function Help (){
     const [faqs, setfaqs] = useState([
         {
-          question: 'Question 1',
-          answer: 'Answer 1',
+          question: 'Does the price include all fees and taxes?',
+          answer: 'There are no hidden fees but taxes are added when purchasing.',
           open: false
         },
         {
-          question: 'Question 2',
-          answer: 'Answer 2',
+          question: 'What is the cancellation policy?',
+          answer: 'Travelers can cancel free of charge up to 24 hours before their trip starts.',
           open: false
         },
         {
-          question: 'Question 3',
-          answer: 'Answer 3',
+          question: 'Do I need travel insurance?',
+          answer: 'Travel insurance is not required.',
           open: false
         }
     ]);
@@ -40,7 +40,13 @@ function Help (){
             <Header />
             <Navbar/>
             <Title />
-            <div className="faqs">
+            <div style={{
+                margin: '15px',
+                padding: '15px',
+                backgroundColor: '#FFFFFF',
+                borderRadius: '8px',
+                boxShadow: '0px 0px 10px rgba(0, 0, 0, 0,2)',
+            }} className="faqs">
                 {faqs.map((faq, i) => (
                     <FAQ faq={faq} index={i} toggleFAQ={toggleFAQ}/>
                 ))}

@@ -2,8 +2,18 @@ import React from 'react'
 
 function Title (){
     return (
-        <header>
-            <h1>FAQ Page</h1>
+        <header style={{
+            display: 'flex',
+    justifyContent: 'center',
+    alignContent: 'center',
+    padding: '15px',
+            backgroundColor: '#000000',
+            color: '#FFFFFF',
+            fontSize: '28px',
+            fontWeight: '700',
+            textTransform: 'uppercase',
+        }}>
+            <h1>FAQs</h1>
         </header>
     )
 }
