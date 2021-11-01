@@ -53,7 +53,8 @@ const Cart = () => (
         marginLeft: 1150,
         fontSize: 25,
         marginTop: -250
-      }}><p>Item:</p></div>
+      }}><p>Item:</p>
+      </div>
         <div style={{
         marginLeft: 1150,
         fontSize: 25,
@@ -76,10 +77,24 @@ const Cart = () => (
         borderRadius: '50px',
         marginTop: 50,
       }}>Checkout</button>
+      <div style={{
+        marginLeft: 1350,
+        fontSize: 25,
+        marginTop: -343
+      }}>$500</div>
+      <div style={{
+        marginLeft: 1353,
+        fontSize: 25,
+        marginTop: 47
+      }}>$$$</div>
+      <div style={{
+        marginLeft: 1353,
+        fontSize: 25,
+        marginTop: 100
+      }}>$$$$</div>
     </div>
-    
-  </div >
-  
+ 
+  </div > 
 )
   
 const imageSec2 = {
