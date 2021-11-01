@@ -35,14 +35,14 @@ const Searchbar = () => {
               fontWeight: 6,
               cursor: 'pointer'
             }}
-              onClick={e => console.log(result)}
+              onClick={_ => window.location.href=`/item?id=${result.objectID}`}
             >
               {result.name}
             </div>
           ))}
         </div>
       )
-    } else if (searched === true) {
+    } else if (searched === true && searchResults.length < 1) {
       {
         return (
           <div style={{

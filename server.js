@@ -2,6 +2,7 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import next from 'next'
 import searchRoutes from './routes/search-routes'
+import { getInfo } from './services/events'
 
 const port = 3000
 const dev = true
@@ -31,9 +32,17 @@ app.prepare().then(() => {
     app.render(req, res, '/help')
   })
 
+
+  server.get('/item', (req, res) => {
+    getInfo(req.query.id)
+      .then(data => {
+        app.render(req, res, '/item', data)
+      })
+  })
+
   server.post('/reviews/:objectID', (req, res) => {
     const objectID = req.params.objectID
-    
+
   })
 
   server.get('*', (req, res) => {
