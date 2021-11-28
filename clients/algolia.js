@@ -55,6 +55,11 @@ class Events {
         return result
       })
   }
+
+  getMultiItemInfo(ids) {
+    return this.index.getObjects(ids)
+      .then(results => results)
+  }
 };
 
 class Hotels {

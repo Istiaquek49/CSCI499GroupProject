@@ -2,7 +2,8 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import next from 'next'
 import searchRoutes from './routes/search-routes'
-import { getInfo } from './services/events'
+import { getInfo, getMultiItemInfo } from './services/events'
+import { getCartForUser } from './clients/firebase'
 
 const port = 3000
 const dev = true
@@ -25,6 +26,11 @@ app.prepare().then(() => {
   })
 
   server.get('/cart', (req, res) => {
+    // Get cart items from firebase then algolia fetch
+    getCartForUser()
+    .then(items => {
+      console.log(items)
+    })
     app.render(req, res, '/cart')
   })
 
@@ -43,6 +49,12 @@ app.prepare().then(() => {
   server.post('/reviews/:objectID', (req, res) => {
     const objectID = req.params.objectID
 
+  })
+
+  server.post('/add-item', (req, res) => {
+    const itemId = req.body
+    console.log(itemId)
+    res.send(200)
   })
 
   server.get('*', (req, res) => {

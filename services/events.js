@@ -13,3 +13,8 @@ export const getInfo = (objectID) => {
   return events.getItemInfo(objectID)
     .then(result => result)
 }
+
+export const getMultiItemInfo = (objectIds) => {
+  return events.getMultiItemInfo(objectIds)
+    .then(results => results)
+}
