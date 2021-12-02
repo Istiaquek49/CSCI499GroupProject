@@ -3,6 +3,6 @@ node_modules
 .env
 
 business-list.json
-/custom-scripts
+firebase-token.json
 
-csci499project-62541ce998df.json
+/custom-scripts
