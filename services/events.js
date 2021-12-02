@@ -1,4 +1,5 @@
 import { Events } from '../clients/algolia'
+import { getAllReviewsForEvent } from '../clients/firebase'
 
 const events = new Events()
 
@@ -9,9 +10,14 @@ export const search = (term) => {
     })
 }
 
-export const getInfo = (objectID) => {
-  return events.getItemInfo(objectID)
-    .then(result => result)
+export const getInfo = async (objectID) => {
+  const eventInfo = await events.getItemInfo(objectID)
+  const reviews = await getAllReviewsForEvent('eventId')
+
+  return {
+    ...eventInfo,
+    reviews
+  }
 }
 
 export const getMultiItemInfo = (objectIds) => {

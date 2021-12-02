@@ -30,8 +30,8 @@ app.prepare().then(() => {
     getCartForUser()
     .then(items => {
       console.log(items)
+      app.render(req, res, '/cart')
     })
-    app.render(req, res, '/cart')
   })
 
   server.get('/help', (req, res) => {

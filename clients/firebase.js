@@ -1,13 +1,14 @@
-import { initializeApp, applicationDefault, cert } from 'firebase-admin/app'
-import { getFirestore, Timestamp, FieldValue } from 'firebase-admin/firestore'
+import admin from 'firebase-admin'
 
 const serviceAccount = require('../csci499project-62541ce998df.json');
 
-initializeApp({
-  credential: cert(serviceAccount)
-});
+if (!admin.apps.length) {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
+  })
+}
 
-const db = getFirestore();
+const db = admin.firestore();
 
 export const addItemToCart = (id) => {
   return db.collection('cart').set({
@@ -18,6 +19,42 @@ export const addItemToCart = (id) => {
     .then(res => res.id)
 }
 
-export const getCartForUser = (uid) => {
-  return db.collection('cart').where('user' === 'user1')
+export const getCartForUser = async (uid) => {
+  const cartRef = db.collection('cart')
+  const snapshot = await cartRef.where('user', '==', 'user1').get()
+
+  if (snapshot.empty) {
+    console.log("Cart is empty")
+    return []
+  }
+
+  return snapshot.map(doc => ({ id: doc.id, ...doc.data }))
+}
+
+export const addReviewForUser = async (userId, reviewData) => {
+
+}
+
+export const getReviewsForUser = async (userId) => {
+
+}
+
+export const getAllReviewsForEvent = async (eventId) => {
+  const reviewRef = db.collection('reviews')
+  const snapshot = await reviewRef.where('eventId', '==', eventId).get()
+
+  if (snapshot.empty) {
+    console.log("No reviews")
+    return []
+  }
+
+  const result = []
+  snapshot.forEach(doc => {
+    result.push({
+      id: doc.id,
+      ...doc.data()
+    })
+  })
+
+  return result
 }
