@@ -23,7 +23,7 @@ const Searchbar = () => {
           display: 'flex',
           flexDirection: 'column',
           position: 'absolute',
-          maxHeight: 500,
+          maxHeight: 484,
           backgroundColor: '#F3F7F0',
           overflow: 'scroll'
         }}>
