@@ -32,8 +32,9 @@ const Slideshowlocation = () => {
                 }}
                   src={fadeImage.url} />
                 <h2 style={{
-                    border: '1px solid black',
-                  top: 837,
+                  border: '1px solid black',
+                  color: 'white',
+                  top: 950,
                     position: 'absolute'
                 }}>{fadeImage.caption}</h2>
               </div>
