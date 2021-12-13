@@ -12,8 +12,13 @@ const Searchbar = () => {
       fetch(`/search?searchTerm=${searchTerm}`)
         .then(res => res.json())
         .then(results => setSearchResults(results))
+    }if (locationTerm.length) {
+      fetch(`/search?searchTerm=${locationTerm}`)
+        .then(res => res.json())
+        .then(results => setSearchResults(results))
     }
   }
+
 
   const results = () => {
     if (searchResults.length) {
