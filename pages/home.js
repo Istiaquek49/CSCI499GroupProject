@@ -2,11 +2,8 @@ import React from 'react'
 import Header from '../components/header'
 import Navbar from '../components/navbar'
 import Main from '../components/home-main'
-import Footer from '../components/footer'
-import Description from '../components/description'
 import Slideshow from '../components/slideshow'
 import Slideshowlocation from '../components/slideshowlocation'
-// import Cards from '../components/Cards'
 
 // Color Palette
 // #003E92 (Blue)
@@ -27,8 +24,6 @@ const Home = () => (
     <Main />
     <Slideshow />
     <Slideshowlocation/>
-    {/* <Cards /> */}
-    {/* <Footer /> */}
   </div >
 )
 

@@ -1,6 +1,5 @@
 import React from 'react'
-// import SearchBar from './Searchbar'
-// import Footer from './Footer'
+
 
 const description = () => (
         <div style={fix}>

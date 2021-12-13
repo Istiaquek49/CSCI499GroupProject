@@ -31,7 +31,9 @@
     "react-select": "^5.1.0",
     "react-shopping-cart": "^1.9.5",
     "react-slideshow-image": "^3.5.1",
-    "stream": "0.0.2"
+    "react-stripe-checkout": "^2.6.3",
+    "stream": "0.0.2",
+    "stripe": "^8.193.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.4",
@@ -45,5 +47,5 @@
   },
   "browser": {
     "crypto": false
-}
+  }
 }
