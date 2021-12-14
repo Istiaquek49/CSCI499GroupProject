@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/header'
 import Navbar from '../components/navbar'
-import Searchbar2 from '../components/searchbar2'
+import Searchbar from '../components/searchbar'
 
 const Item = (props) => {
 
@@ -22,7 +22,7 @@ const Item = (props) => {
     <>
       <Header />
       <Navbar />
-      <Searchbar2/>
+      <Searchbar/>
       <div style={{
         display: 'flex',
         flexDirection: 'column',
