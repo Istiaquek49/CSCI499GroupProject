@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Searchbar = () => {
+const Searchbar2 = () => {
   const [searchTerm, setSearchTerm] = useState("")
   const [locationTerm, setLocationTerm] = useState("")
   const [searchResults, setSearchResults] = useState([])
@@ -116,4 +116,4 @@ const Searchbar = () => {
   )
 }
 
-export default Searchbar
+export default Searchbar2

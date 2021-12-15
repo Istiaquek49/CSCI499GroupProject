@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/header'
 import Navbar from '../components/navbar'
+import Searchbar from '../components/searchbar'
 
 const Item = (props) => {
 
@@ -21,6 +22,7 @@ const Item = (props) => {
     <>
       <Header />
       <Navbar />
+      <Searchbar/>
       <div style={{
         display: 'flex',
         flexDirection: 'column',
