@@ -10,11 +10,11 @@ if (!admin.apps.length) {
 
 const db = admin.firestore();
 
-export const addItemToCart = (id) => {
+export const addItemToCart = (id, userId) => {
   return db.collection('cart').set({
     itemId: id,
     date_added: new Date().valueOf(),
-    user: 'user1'
+    user: userId
   })
     .then(res => res.id)
 }
@@ -32,7 +32,13 @@ export const getCartForUser = async (uid) => {
 }
 
 export const addReviewForUser = async (userId, reviewData) => {
+  const reviewRef = db.collection('reviews')
+  const reviewObj = {
+    userId,
+    ...reviewData
+  }
 
+  return reviewRef.add(reviewObj)
 }
 
 export const getReviewsForUser = async (userId) => {
