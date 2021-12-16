@@ -90,15 +90,15 @@ export const addReceipt = async (uid) => {
     items.push(doc.id)
   })
 
-  return receiptsRef.add({
+  await  receiptsRef.add({
     date_created: new Date().valueOf(),
     price: total,
     total_item_count: itemsCount,
     user: 'user1'
   })
 
-  // const promises = items.map(id => removeItem(id))
-  // return Promise.all(promises)
+  const promises = items.map(id => removeItem(id))
+  return Promise.all(promises)
 }
 
 export const viewAllReceipts = async (uid) => {

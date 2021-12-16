@@ -68,7 +68,7 @@ const Cart = ({ items }) => {
                   fontSize: 18,
                   cursor: 'pointer'
                 }}
-                onClick={() => window.location.href = '/orders'}>Past Orders</button>
+                  onClick={() => window.location.href = '/orders'}>Past Orders</button>
                 <div style={{
                   borderTop: '1px solid #e3e3e3',
                   marginTop: 10,
