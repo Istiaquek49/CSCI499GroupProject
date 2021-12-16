@@ -6,6 +6,7 @@ const Item = (props) => {
   const [showAddReview, toggleAddReview] = useState(false)
   const [name, setName] = useState("")
   const [review, setReview] = useState("")
+  const [quantity, setQuantity] = useState(1)
   const [error, setError] = useState(false)
   let ref = null
 
@@ -35,16 +36,21 @@ const Item = (props) => {
   }, [showAddReview])
 
   const addItem = () => {
-    fetch(`/add-item/${props.objectID}`, {
+    fetch('/add-item', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        id: props.objectID
+        id: props.objectID,
+        image: props.images[0],
+        name: props.name,
+        price: props.price
       })
     })
-      .then(res => res.json())
+      .then(res => {
+        console.log('add item')
+      })
   }
 
   return (
@@ -131,7 +137,7 @@ const Item = (props) => {
                   <div style={{
                     border: '1px solid #e3e3e3',
                     padding: 10,
-                    borderBottom: 10
+                    marginBottom: 10
                   }}>
                     <p style={{ fontSize: 20 }}>{review.name}</p>
                     <p style={{ marginTop: 30, fontSize: 18, marginBottom: 30 }}>{review.text}</p>

@@ -3,7 +3,7 @@ import bodyParser from 'body-parser'
 import next from 'next'
 import searchRoutes from './routes/search-routes'
 import { getInfo, getMultiItemInfo } from './services/events'
-import { getCartForUser, addReviewForUser } from './clients/firebase'
+import { getCartForUser, addReviewForUser, addItemToCart } from './clients/firebase'
 
 const port = 3000
 const dev = true
@@ -26,12 +26,10 @@ app.prepare().then(() => {
   })
 
   server.get('/cart', (req, res) => {
-    // Get cart items from firebase then algolia fetch
     getCartForUser()
-    .then(items => {
-      console.log(items)
-      app.render(req, res, '/cart')
-    })
+      .then(items => {
+        app.render(req, res, '/cart', { items })
+      })
   })
 
   server.get('/help', (req, res) => {
@@ -49,15 +47,17 @@ app.prepare().then(() => {
   server.post('/review', (req, res) => {
     const reviewObj = req.body
     addReviewForUser('user1', reviewObj)
-    .then(_ => {
-      res.sendStatus(200)
-    })
+      .then(_ => {
+        res.sendStatus(200)
+      })
   })
 
   server.post('/add-item', (req, res) => {
-    const itemId = req.body
-    console.log(itemId)
-    res.sendStatus(200)
+    const itemObj = req.body
+    addItemToCart(itemObj, 'user1')
+      .then(_ => {
+        res.sendStatus(200)
+      })
   })
 
   server.get('*', (req, res) => {

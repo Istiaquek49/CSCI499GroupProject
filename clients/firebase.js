@@ -10,13 +10,12 @@ if (!admin.apps.length) {
 
 const db = admin.firestore();
 
-export const addItemToCart = (id, userId) => {
-  return db.collection('cart').set({
-    itemId: id,
+export const addItemToCart = (itemInfo, userId) => {
+  return db.collection('cart').add({
     date_added: new Date().valueOf(),
-    user: userId
+    user: userId,
+    ...itemInfo
   })
-    .then(res => res.id)
 }
 
 export const getCartForUser = async (uid) => {
@@ -28,7 +27,15 @@ export const getCartForUser = async (uid) => {
     return []
   }
 
-  return snapshot.map(doc => ({ id: doc.id, ...doc.data }))
+  const result = []
+  snapshot.forEach(doc => {
+    result.push({
+      id: doc.id,
+      ...doc.data()
+    })
+  })
+
+  return result.sort((a, b) => a.date_added - b.date_added)
 }
 
 export const addReviewForUser = async (userId, reviewData) => {
