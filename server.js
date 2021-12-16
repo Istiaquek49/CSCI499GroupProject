@@ -7,7 +7,10 @@ import {
   getCartForUser,
   addReviewForUser,
   addItemToCart,
-  removeItem
+  removeItem,
+  addReceipt,
+  getReceiptInfo,
+  viewAllReceipts
 } from './clients/firebase'
 
 const port = 3000
@@ -68,9 +71,31 @@ app.prepare().then(() => {
   server.delete('/delete-item', (req, res) => {
     const itemId = req.query.itemId
     removeItem(itemId)
-    .then(_ => {
-      res.sendStatus(200)
-    })
+      .then(_ => {
+        res.sendStatus(200)
+      })
+  })
+
+  server.post('/checkout', (req, res) => {
+    addReceipt()
+      .then(r => {
+        res.send({ id: r.id })
+      })
+  })
+
+  server.get('/order-complete', (req, res) => {
+    const { id } = req.query
+    getReceiptInfo(id)
+      .then(info => {
+        app.render(req, res, '/order_complete', info)
+      })
+  })
+
+  server.get('/orders', (req, res) => {
+    viewAllReceipts('user1')
+      .then(receipts => {
+        app.render(req, res, '/all_orders', { orders: receipts })
+      })
   })
 
   server.get('*', (req, res) => {

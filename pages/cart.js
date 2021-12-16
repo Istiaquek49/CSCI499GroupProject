@@ -17,6 +17,14 @@ const Cart = ({ items }) => {
     }
   }
 
+  const checkout = () => {
+    fetch('/checkout', {
+      method: 'POST'
+    })
+      .then(res => res.json())
+      .then(({ id }) => window.location.href = `/order-complete?id=${id}`)
+  }
+
   return (
     <>
       <Header />
@@ -37,76 +45,98 @@ const Cart = ({ items }) => {
           minHeight: 300,
           boxShadow: '2px 4px 4px #e3e3e3'
         }}>
-          <p style={{
-            fontSize: 24,
-            width: '100%',
-            textAlign: 'center',
-            marginTop: 10
-          }}>Order Details</p>
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center'
-          }}>
-            <div style={{
-              borderTop: '1px solid #e3e3e3',
-              marginTop: 10,
-              marginBottom: 20,
-              width: '80%'
-            }} />
-            {items.map((item, i) => (
+          {items.length ?
+            <div>
+              <p style={{
+                fontSize: 24,
+                width: '100%',
+                textAlign: 'center',
+                marginTop: 10
+              }}>Order Details</p>
               <div style={{
-                width: '90%',
-                padding: 10,
                 display: 'flex',
                 flexDirection: 'column',
+                alignItems: 'center'
               }}>
+                <button style={{
+                  textAlign: 'center',
+                  textDecoration: 'underline',
+                  backgroundColor: 'white',
+                  color: 'black',
+                  border: 'none',
+                  marginTop: 10,
+                  fontSize: 18,
+                  cursor: 'pointer'
+                }}
+                onClick={() => window.location.href = '/orders'}>Past Orders</button>
                 <div style={{
-                  display: 'flex',
-                  flexDirection: 'row'
-                }}>
-                  <img
-                    src={item.image}
-                    style={{
-                      width: 100,
-                      height: 100,
-                      borderRadius: '50%'
-                    }}
-                  />
-                  <div style={{ marginLeft: 20 }}>
-                    <p style={{ fontSize: 16, marginBottom: 10 }}>{item.name}</p>
-                    <p style={{ fontSize: 16 }}>${(item.price / 100).toFixed(2).toString()}</p>
-                  </div>
-                  <button style={{
-                    textDecoration: 'none',
-                    border: 'none',
-                    cursor: 'pointer',
-                    color: 'black',
-                    textAlign: 'center',
-                    marginLeft: 'auto',
-                    backgroundColor: 'white',
-                    textDecoration: 'underline'
-                  }}
-                    onClick={() => removeItem(item.doc_id)}
-                  >
-                    Remove
-                  </button>
-                </div>
-                {i < items.length - 1 && <div
-                  style={{
+                  borderTop: '1px solid #e3e3e3',
+                  marginTop: 10,
+                  marginBottom: 20,
+                  width: '80%'
+                }} />
+                {items.map((item, i) => (
+                  <div style={{
                     width: '90%',
-                    border: '1px solid #e3e3e3',
-                    alignSelf: 'center',
-                    marginTop: 20,
-                    marginBottom: 10
-                  }}
-                />}
-                <div
-                  style={{ marginBottom: 10 }}
-                />
+                    padding: 10,
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}>
+                    <div style={{
+                      display: 'flex',
+                      flexDirection: 'row'
+                    }}>
+                      <img
+                        src={item.image}
+                        style={{
+                          width: 100,
+                          height: 100,
+                          borderRadius: '50%'
+                        }}
+                      />
+                      <div style={{ marginLeft: 20 }}>
+                        <p style={{ fontSize: 16, marginBottom: 10 }}>{item.name}</p>
+                        <p style={{ fontSize: 16 }}>${(item.price / 100).toFixed(2).toString()}</p>
+                      </div>
+                      <button style={{
+                        textDecoration: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
+                        color: 'black',
+                        textAlign: 'center',
+                        marginLeft: 'auto',
+                        backgroundColor: 'white',
+                        textDecoration: 'underline'
+                      }}
+                        onClick={() => removeItem(item.doc_id)}
+                      >
+                        Remove
+                      </button>
+                    </div>
+                    {i < items.length - 1 && <div
+                      style={{
+                        width: '90%',
+                        border: '1px solid #e3e3e3',
+                        alignSelf: 'center',
+                        marginTop: 20,
+                        marginBottom: 10
+                      }}
+                    />}
+                    <div
+                      style={{ marginBottom: 10 }}
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div> :
+            <div>
+              <p style={{
+                fontSize: 24,
+                width: '100%',
+                textAlign: 'center',
+                marginTop: 10
+              }}> No Items in Cart</p>
+            </div>}
         </div>
         <div style={{
           width: '30%',
@@ -145,7 +175,9 @@ const Cart = ({ items }) => {
             textDecoration: 'none',
             border: 'none',
             cursor: 'pointer'
-          }}>Checkout</button>
+          }}
+            onClick={() => checkout()}
+          >Checkout</button>
         </div>
       </div>
     </>

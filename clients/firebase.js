@@ -40,7 +40,7 @@ export const getCartForUser = async (uid) => {
 
 export const removeItem = (itemId) => {
   const cartRef = db.collection('cart')
-  
+
   return cartRef.doc(itemId).delete()
 }
 
@@ -73,4 +73,53 @@ export const getAllReviewsForEvent = async (eventId) => {
   })
 
   return result.sort((a, b) => b.date_created - a.date_created)
+}
+
+export const addReceipt = async (uid) => {
+  const receiptsRef = db.collection('receipts')
+  const cartRef = db.collection('cart')
+
+  //Get cart
+  const snapshot = await cartRef.where('user', '==', 'user1').get()
+
+  let total = 0, itemsCount = 0, items = []
+  snapshot.forEach(doc => {
+    let data = doc.data()
+    total += data.price
+    itemsCount++
+    items.push(doc.id)
+  })
+
+  return receiptsRef.add({
+    date_created: new Date().valueOf(),
+    price: total,
+    total_item_count: itemsCount,
+    user: 'user1'
+  })
+
+  // const promises = items.map(id => removeItem(id))
+  // return Promise.all(promises)
+}
+
+export const viewAllReceipts = async (uid) => {
+  const receiptRef = db.collection('receipts')
+
+  const snapshot = await receiptRef.where('user', '==', 'user1').get()
+
+  const results = []
+  snapshot.forEach(doc => {
+    results.push({
+      doc_id: doc.id,
+      ...doc.data()
+    })
+  })
+
+  return results.sort((a, b) => b.date_created - a.date_created)
+}
+
+export const getReceiptInfo = async id => {
+  const receiptRef = db.collection('receipts')
+
+  const snapshot = await receiptRef.doc(id).get()
+  return snapshot.data()
 }
