@@ -44,22 +44,30 @@ const description = () => (
             </h1>
             
             <section style={border1}>
+            {/* <h2 style={tester8}> */}
+                <h3 style={{paddingTop:20, fontFamily: "Corben"}}>Convenient and Easy </h3>
+                At reservify, we offer a way to book and plan <br></br>
+                your next trip without the hassle <br></br>
+                of visiting different websites to plan what to do.
+            {/* <h2 style={tester10}>
+            <h2 style={tester9}> 
+            <h2 style={tester11}> */}
+   
             </section> 
             {/* <hr style={{width:"50%"}}/>   */}
-            <h2 style={tester8}>Convenient and Easy</h2>
-            <h2 style={tester10}>At reservify, we offer a way to book and plan</h2>
-            <h2 style={tester9}> your next trip without the hassle</h2>
-            <h2 style={tester11}>of visiting different websites to plan what to do.</h2>
-            {/* <p style={tester4}>
-            <Footer/> \
-            </p> */}
-            {/* <div style={contact}>
-                    <h2>Contact Us</h2>
+         
+            <div style={contact}>
+                    <hr></hr>
+                    <br></br>
+                    <h2>Contact Us</h2><br></br>
                     20 Filonos Street, NYC <br></br>
                     13457-6598, NY <br></br>
                     contact@reservify.com<br></br>
                     Tel: +1(918) 299-3999 <br></br>
-            </div> */}
+            </div>
+            {/* <p style={tester4}>
+            <Footer/> \
+            </p> */}
             </section> 
         </section>  
         </div>
@@ -134,26 +142,35 @@ const imgs = {
 const contact = {
     fontFamily: "zillaslab,palatino,Palatino Linotype,serif",
     textAlign: 'center',
-    marginTop: '700px',
+    width: 700,
+    marginTop: '670px',
+    marginRight: '800px',
     fontSize: '25px',
     lineHeight: '35px',
     color: "#666666"
 }
 const border1 = {
     height : 300,
-    width : 500,
+    width : 1000,
     marginTop : 300,
     marginLeft: -500,
+    marginRight: -500,
     borderStyle: 'solid',
     borderColor: '#808080',
     boxShadow: '0 1px 1px rgb(0 0 0 / 15%), 0 2px 2px rgb(0 0 0 / 15%), 0 4px 4px rgb(0 0 0 / 15%), 0 8px 8px rgb(0 0 0 / 15%)',
+    textAlign: 'center',
+    fontSize: '30px',
+    // fontFamily: "zillaslab,palatino,Palatino Linotype,serif",
+    color: "#666666",
+    fontFamily: "Corben",
+    lineHeight: '50px'
 }
 
 const tester8 = {
     marginTop: 340,
-    marginLeft: -355,
+    marginLeft: -300,
     fontSize: '25px',
-    fontStyle: 'italic',
+    // fontStyle: 'italic',
     fontWeight: '700',
     fontFamily: "zillaslab,palatino,Palatino Linotype,serif",
     color: "#666666",
@@ -162,7 +179,7 @@ const tester8 = {
 
 const tester10 = {
     marginTop: 425,
-    marginLeft: -310,
+    marginLeft: -320,
     fontSize: '20px',
     fontFamily: "zillaslab,palatino,Palatino Linotype,serif",
     color: "#666666",
@@ -178,7 +195,7 @@ const tester9 = {
 
 const tester11 = {
     marginTop: 515,
-    marginLeft: -330,
+    marginLeft: -390,
     fontSize: '20px',
     fontFamily: "zillaslab,palatino,Palatino Linotype,serif",
     color: "#666666",
@@ -286,7 +303,7 @@ const greenCon = {
       borderRadius: 20,
     borderStyle: 'solid',
     borderColor:'#808080',
-    width: '100%',
+    width: '95%',
     color:'#1a1b1c',
     
 
