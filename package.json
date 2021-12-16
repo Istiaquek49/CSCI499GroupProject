@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Istiaquek49/CSCI499GroupProject#readme",
   "dependencies": {
     "algoliasearch": "^4.10.5",
+    "antd": "^4.17.3",
     "body-parser": "^1.19.0",
     "crypto": "^1.0.1",
     "dotenv": "^10.0.0",

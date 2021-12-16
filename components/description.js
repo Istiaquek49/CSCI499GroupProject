@@ -56,7 +56,7 @@ const description = () => (
             </section> 
             {/* <hr style={{width:"50%"}}/>   */}
          
-            <div style={contact}>
+            {/* <div style={contact}>
                     <hr></hr>
                     <br></br>
                     <h2>Contact Us</h2><br></br>
@@ -64,7 +64,7 @@ const description = () => (
                     13457-6598, NY <br></br>
                     contact@reservify.com<br></br>
                     Tel: +1(918) 299-3999 <br></br>
-            </div>
+            </div> */}
             {/* <p style={tester4}>
             <Footer/> \
             </p> */}
@@ -151,10 +151,10 @@ const contact = {
 }
 const border1 = {
     height : 300,
-    width : 1000,
+    width : 500,
     marginTop : 300,
     marginLeft: -500,
-    marginRight: -500,
+    // marginRight: -500,
     borderStyle: 'solid',
     borderColor: '#808080',
     boxShadow: '0 1px 1px rgb(0 0 0 / 15%), 0 2px 2px rgb(0 0 0 / 15%), 0 4px 4px rgb(0 0 0 / 15%), 0 8px 8px rgb(0 0 0 / 15%)',
