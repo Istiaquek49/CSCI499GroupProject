@@ -27,7 +27,15 @@ export const getCartForUser = async (uid) => {
     return []
   }
 
-  return snapshot.map(doc => ({ id: doc.id, ...doc.data }))
+  const result = []
+  snapshot.forEach(doc => {
+    result.push({
+      id: doc.id,
+      ...doc.data()
+    })
+  })
+
+  return result.sort((a, b) => a.date_added - b.date_added)
 }
 
 export const addReviewForUser = async (userId, reviewData) => {

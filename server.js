@@ -26,11 +26,9 @@ app.prepare().then(() => {
   })
 
   server.get('/cart', (req, res) => {
-    // Get cart items from firebase then algolia fetch
     getCartForUser()
       .then(items => {
-        console.log(items)
-        app.render(req, res, '/cart')
+        app.render(req, res, '/cart', { items })
       })
   })
 
