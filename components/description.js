@@ -159,7 +159,7 @@ const border1 = {
     borderColor: '#808080',
     boxShadow: '0 1px 1px rgb(0 0 0 / 15%), 0 2px 2px rgb(0 0 0 / 15%), 0 4px 4px rgb(0 0 0 / 15%), 0 8px 8px rgb(0 0 0 / 15%)',
     textAlign: 'center',
-    fontSize: '25px',
+    fontSize: '22px',
     // fontFamily: "zillaslab,palatino,Palatino Linotype,serif",
     color: "#666666",
     fontFamily: "Corben",
@@ -226,14 +226,14 @@ const pic3 = {
 }
 
 const pic4 = {
-    marginLeft: 200,
+    marginLeft: 250,
     marginTop: 380,
     backgroundImage: `url(https://purewows3.imgix.net/images/articles/2019_04/most-beautiful-places-in-the-world-Seljalandsfoss__Iceland.png?auto=format,compress&cs=strip)`,
     position: "absolute",
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'right',
-    width: ' 390px',
+    width: ' 400px',
     height: '300px',
     borderRadius: 50,
     borderStyle: 'solid',
