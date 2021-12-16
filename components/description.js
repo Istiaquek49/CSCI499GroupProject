@@ -159,7 +159,7 @@ const border1 = {
     borderColor: '#808080',
     boxShadow: '0 1px 1px rgb(0 0 0 / 15%), 0 2px 2px rgb(0 0 0 / 15%), 0 4px 4px rgb(0 0 0 / 15%), 0 8px 8px rgb(0 0 0 / 15%)',
     textAlign: 'center',
-    fontSize: '30px',
+    fontSize: '25px',
     // fontFamily: "zillaslab,palatino,Palatino Linotype,serif",
     color: "#666666",
     fontFamily: "Corben",
