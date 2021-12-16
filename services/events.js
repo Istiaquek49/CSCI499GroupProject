@@ -12,7 +12,7 @@ export const search = (term) => {
 
 export const getInfo = async (objectID) => {
   const eventInfo = await events.getItemInfo(objectID)
-  const reviews = await getAllReviewsForEvent('eventId')
+  const reviews = await getAllReviewsForEvent(objectID)
 
   return {
     ...eventInfo,

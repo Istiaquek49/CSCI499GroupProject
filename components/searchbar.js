@@ -30,7 +30,8 @@ const Searchbar = () => {
           position: 'absolute',
           maxHeight: 484,
           backgroundColor: '#F3F7F0',
-          overflow: 'scroll'
+          overflow: 'scroll',
+          zIndex: -1
         }}>
           {searchResults.map(result => (
             <div style={{
@@ -70,7 +71,8 @@ const Searchbar = () => {
   return (
     <div style={{
       fontSize: 20,
-      position: 'relative'
+      position: 'relative',
+      zIndex: -1
     }}>
       Find
       <input style={{
