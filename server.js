@@ -3,7 +3,12 @@ import bodyParser from 'body-parser'
 import next from 'next'
 import searchRoutes from './routes/search-routes'
 import { getInfo, getMultiItemInfo } from './services/events'
-import { getCartForUser, addReviewForUser, addItemToCart } from './clients/firebase'
+import {
+  getCartForUser,
+  addReviewForUser,
+  addItemToCart,
+  removeItem
+} from './clients/firebase'
 
 const port = 3000
 const dev = true
@@ -58,6 +63,14 @@ app.prepare().then(() => {
       .then(_ => {
         res.sendStatus(200)
       })
+  })
+
+  server.delete('/delete-item', (req, res) => {
+    const itemId = req.query.itemId
+    removeItem(itemId)
+    .then(_ => {
+      res.sendStatus(200)
+    })
   })
 
   server.get('*', (req, res) => {

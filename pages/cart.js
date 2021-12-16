@@ -6,6 +6,17 @@ const Cart = ({ items }) => {
   let total = 0
   items.forEach(item => total += item.price)
 
+  const removeItem = (id) => {
+    if (id.length) {
+      fetch(`/delete-item?itemId=${id}`, {
+        method: 'DELETE'
+      })
+        .then(_ => {
+          window.location.reload(true)
+        })
+    }
+  }
+
   return (
     <>
       <Header />
@@ -23,7 +34,8 @@ const Cart = ({ items }) => {
           marginLeft: 20,
           border: '1px solid #e3e3e3',
           width: '65%',
-          minHeight: 300
+          minHeight: 300,
+          boxShadow: '2px 4px 4px #e3e3e3'
         }}>
           <p style={{
             fontSize: 24,
@@ -65,6 +77,20 @@ const Cart = ({ items }) => {
                     <p style={{ fontSize: 16, marginBottom: 10 }}>{item.name}</p>
                     <p style={{ fontSize: 16 }}>${(item.price / 100).toFixed(2).toString()}</p>
                   </div>
+                  <button style={{
+                    textDecoration: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    color: 'black',
+                    textAlign: 'center',
+                    marginLeft: 'auto',
+                    backgroundColor: 'white',
+                    textDecoration: 'underline'
+                  }}
+                    onClick={() => removeItem(item.doc_id)}
+                  >
+                    Remove
+                  </button>
                 </div>
                 {i < items.length - 1 && <div
                   style={{
@@ -92,7 +118,8 @@ const Cart = ({ items }) => {
           top: 20,
           right: 20,
           display: 'flex',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          boxShadow: '2px 4px 4px #e3e3e3'
         }}>
           <p style={{
             fontSize: 20,

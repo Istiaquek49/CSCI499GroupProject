@@ -30,12 +30,18 @@ export const getCartForUser = async (uid) => {
   const result = []
   snapshot.forEach(doc => {
     result.push({
-      id: doc.id,
+      doc_id: doc.id,
       ...doc.data()
     })
   })
 
   return result.sort((a, b) => a.date_added - b.date_added)
+}
+
+export const removeItem = (itemId) => {
+  const cartRef = db.collection('cart')
+  
+  return cartRef.doc(itemId).delete()
 }
 
 export const addReviewForUser = async (userId, reviewData) => {
