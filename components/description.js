@@ -3,7 +3,30 @@ import React from 'react'
 
 const description = () => (
         <div style={fix}>
-        <section style={terstt}>
+            {/* <h1 style={headerSty}>Explore. Experience. Enjoy. </h1>
+            <div style={para}>
+                Convenient and Easy 
+                <br></br>
+                    At reservify, we offer a way to book and plan your next trip without the hassle 
+                </div>
+            <div style={image}>
+                    <img src="https://static.onecms.io/wp-content/uploads/sites/34/2020/08/04/woman-hiking-mountain-getty-0720.jpg" style={imgs}/>
+                    <img src="https://purewows3.imgix.net/images/articles/2019_04/most-beautiful-places-in-the-world-Seljalandsfoss__Iceland.png?auto=format,compress&amp;cs=strip" style={imgs}/>
+                    <img src="https://img1.10bestmedia.com/Images/Photos/383754/GettyImages-1162114757_54_990x660.jpg" style={imgs}/>
+                </div>
+            <div style={greyBG}>
+
+                <div style={contact}>
+                    <h2>Contact Us</h2>
+                    20 Filonos Street, NYC <br></br>
+                    13457-6598, NY <br></br>
+                    contact@reservify.com<br></br>
+                    Tel: +1(918) 299-3999 <br></br>
+                </div>
+
+            </div> */}
+
+         <section style={terstt}>
             <section style={greenCon}>
            <div>
            <h1 style={tester3}>
@@ -20,9 +43,9 @@ const description = () => (
             Enjoy.
             </h1>
             
-            {<section style={border1}>
-            </section> }
-            {/* <hr style={{width:"50%"}}/>  */}
+            <section style={border1}>
+            </section> 
+            {/* <hr style={{width:"50%"}}/>   */}
             <h2 style={tester8}>Convenient and Easy</h2>
             <h2 style={tester10}>At reservify, we offer a way to book and plan</h2>
             <h2 style={tester9}> your next trip without the hassle</h2>
@@ -30,19 +53,100 @@ const description = () => (
             {/* <p style={tester4}>
             <Footer/> \
             </p> */}
-            </section>
-        </section>
+            {/* <div style={contact}>
+                    <h2>Contact Us</h2>
+                    20 Filonos Street, NYC <br></br>
+                    13457-6598, NY <br></br>
+                    contact@reservify.com<br></br>
+                    Tel: +1(918) 299-3999 <br></br>
+            </div> */}
+            </section> 
+        </section>  
         </div>
     
 )
 
+const greyBG = {
+    backgroundColor: '#f7f7f7',
+    borderRadius: '7px',
+    padding: '2em 1em',
+    width: '100%',
+    height: '100%',
+    maxWidth: '2000px',
+    maxHeight: '220px',
+    marginTop: '2em',
+    marginRight: 'auto',
+    marginBottom: '2em',
+    marginLeft: 'auto',
+    boxSizing: 'border-box',
+    position: 'relative'
+}
+
+const headerSty = {
+    marginTop: '60px',
+    marginBottom: '30px',
+    fontSize: '50px',
+    textAlign: 'center',
+    fontWeight: 'semibold',
+    // fontWeight: 4,
+    fontFamily: "zillaslab,palatino,Palatino Linotype,serif",
+    color: "#666666"
+}
+const para = {
+    fontSize: '25px',
+    fontFamily: "zillaslab,palatino,Palatino Linotype,serif",
+    fontWeight: '70px',
+    lineHeight: '30px',
+    color: "#666666",
+    textAlign: 'center'
+}
+
+const image = {
+    width: '200px',
+    height: '390px',
+    marginTop: '65px',
+    marginLeft: '100px',
+    marginRight: '100px',
+    paddingTop: '30px',
+    paddingLeft:'30px',
+    display: 'flex',
+    flex: '1 1',
+    margin: '0 1rem',
+    borderRadius: '3px',
+    paddingRight: '20px',
+    borderColor: 'white',
+}
+const imgs = {
+    width: ' 390px',
+    height: '300px',
+    lineHeight: '20px',
+    marginBottom: '30px',
+    marginTop: '30px',
+    boxSizing: 'border-box',
+    marginLeft: '15px',
+    marginRight: '15px',
+    borderRadius: '10px',
+    borderColor: 'white', 
+    // boxShadow: '0 0 1px 0 rgb(8 11 14 / 6%), 0 16px 16px -1px rgb(8 11 14 / 10%',
+    boxShadow: '0 1px 1px rgb(0 0 0 / 15%), 0 2px 2px rgb(0 0 0 / 15%), 0 4px 4px rgb(0 0 0 / 15%), 0 8px 8px rgb(0 0 0 / 15%)',
+}
+
+const contact = {
+    fontFamily: "zillaslab,palatino,Palatino Linotype,serif",
+    textAlign: 'center',
+    marginTop: '700px',
+    fontSize: '25px',
+    lineHeight: '35px',
+    color: "#666666"
+}
 const border1 = {
     height : 300,
     width : 500,
     marginTop : 300,
     marginLeft: -500,
     borderStyle: 'solid',
-    borderColor: '#808080'
+    borderColor: '#808080',
+    boxShadow: '0 1px 1px rgb(0 0 0 / 15%), 0 2px 2px rgb(0 0 0 / 15%), 0 4px 4px rgb(0 0 0 / 15%), 0 8px 8px rgb(0 0 0 / 15%)',
 }
 
 const tester8 = {
@@ -50,29 +154,34 @@ const tester8 = {
     marginLeft: -355,
     fontSize: '25px',
     fontStyle: 'italic',
-    fontFamily: "Corben",
-    fontWeight: '700'
+    fontWeight: '700',
+    fontFamily: "zillaslab,palatino,Palatino Linotype,serif",
+    color: "#666666",
+
 }
 
 const tester10 = {
     marginTop: 425,
     marginLeft: -310,
     fontSize: '20px',
-    fontFamily: "Corben",
+    fontFamily: "zillaslab,palatino,Palatino Linotype,serif",
+    color: "#666666",
 }
 
 const tester9 = {
     marginTop: 470,
     marginLeft: -330,
     fontSize: '20px',
-    fontFamily: "Corben",
+    fontFamily: "zillaslab,palatino,Palatino Linotype,serif",
+    color: "#666666",
 }
 
 const tester11 = {
     marginTop: 515,
     marginLeft: -330,
     fontSize: '20px',
-    fontFamily: "Corben",
+    fontFamily: "zillaslab,palatino,Palatino Linotype,serif",
+    color: "#666666",
 }
 
 const fix = {
@@ -89,11 +198,14 @@ const pic3 = {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'right',
-    maxWidth: '450px',
+    width: ' 390px',
+    height: '300px',
     borderRadius: 50,
     borderStyle: 'solid',
     borderWidth: 0.5,
-    borderColor: '#1a1b1c'
+    borderColor: 'white',
+    boxShadow: '0 1px 1px rgb(0 0 0 / 15%), 0 2px 2px rgb(0 0 0 / 15%), 0 4px 4px rgb(0 0 0 / 15%), 0 8px 8px rgb(0 0 0 / 15%)',
+
 }
 
 const pic4 = {
@@ -104,11 +216,14 @@ const pic4 = {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'right',
-    maxWidth: '450px',
+    width: ' 390px',
+    height: '300px',
     borderRadius: 50,
     borderStyle: 'solid',
     borderWidth: 0.5,
-    borderColor: '#1a1b1c'
+    borderColor: 'white',
+    boxShadow: '0 1px 1px rgb(0 0 0 / 15%), 0 2px 2px rgb(0 0 0 / 15%), 0 4px 4px rgb(0 0 0 / 15%), 0 8px 8px rgb(0 0 0 / 15%)',
+
 }
 
 const terst = {
@@ -142,6 +257,7 @@ const tester3 = {
     fontSize: '38px',
     fontStyle: 'italic',
     fontFamily: "Corben",
+    color: "#666666"
 }
 
 const terstt = {
@@ -184,11 +300,14 @@ const pic2 = {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    maxWidth: '400px',
+    width: ' 390px',
+    height: '300px',
     borderRadius: 50,
     borderStyle: 'solid',
     borderWidth: 0.5,
-    borderColor: '#1a1b1c'
+    borderColor: 'white',
+    boxShadow: '0 1px 1px rgb(0 0 0 / 15%), 0 2px 2px rgb(0 0 0 / 15%), 0 4px 4px rgb(0 0 0 / 15%), 0 8px 8px rgb(0 0 0 / 15%)',
+
 }
 
 const tester4 = {
@@ -200,6 +319,7 @@ const tester5 = {
     fontSize: '38px',
     fontStyle: 'italic',
     fontFamily: "Corben",
+    color: "#666666"
 }
 
 const tester6 = {
@@ -207,6 +327,7 @@ const tester6 = {
     fontSize: '38px',
     fontStyle: 'italic',
     fontFamily: "Corben",
+    color: "#666666"
 }
 
 const tester7 = {
