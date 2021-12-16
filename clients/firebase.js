@@ -35,19 +35,16 @@ export const addReviewForUser = async (userId, reviewData) => {
   const reviewRef = db.collection('reviews')
   const reviewObj = {
     userId,
+    date_created: new Date().valueOf(),
     ...reviewData
   }
 
   return reviewRef.add(reviewObj)
 }
 
-export const getReviewsForUser = async (userId) => {
-
-}
-
 export const getAllReviewsForEvent = async (eventId) => {
   const reviewRef = db.collection('reviews')
-  const snapshot = await reviewRef.where('eventId', '==', eventId).get()
+  const snapshot = await reviewRef.where('objectID', '==', eventId).get()
 
   if (snapshot.empty) {
     console.log("No reviews")
@@ -62,5 +59,5 @@ export const getAllReviewsForEvent = async (eventId) => {
     })
   })
 
-  return result
+  return result.sort((a, b) => b.date_created - a.date_created)
 }

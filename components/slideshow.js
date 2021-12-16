@@ -23,7 +23,10 @@ const fadeImages = [
 
 const Slideshow = () => {
     return (
-      <div className="slide-container">
+      <div className="slide-container"
+      style={{
+        zIndex: 2
+      }}>
         <Fade>
           {fadeImages.map((fadeImage, index) => (
             <div className="each-fade" key={index}>

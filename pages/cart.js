@@ -6,7 +6,7 @@ const Cart = () => (
   <div>
     <Header />
     <Navbar />
-  </div > 
+  </div>
 )
 export default Cart;
 
